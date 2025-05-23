@@ -62,11 +62,11 @@ tests against. It uses the latest stable version of Celery and can be used, repl
 by the user.
 
 The Dockerfile is published with the source code and can be found using
-:const:`WORKER_DOCKERFILE_ROOTDIR <pytest_celery.vendors.worker.defaults.WORKER_DOCKERFILE_ROOTDIR>`.
+:const:`WORKER_DOCKERFILE_ROOTDIR <pytest_celery_py37.vendors.worker.defaults.WORKER_DOCKERFILE_ROOTDIR>`.
 
-.. literalinclude:: ../../src/pytest_celery/vendors/worker/Dockerfile
+.. literalinclude:: ../../src/pytest_celery_py37/vendors/worker/Dockerfile
    :language: docker
-   :caption: pytest_celery.vendors.worker.Dockerfile
+   :caption: pytest_celery_py37.vendors.worker.Dockerfile
 
 .. _built-in-localstack-broker:
 
@@ -84,7 +84,7 @@ You may add this to ``conftest.py`` to configure the Localstack broker.
     import pytest
     from celery import Celery
 
-    from pytest_celery import LOCALSTACK_CREDS
+    from pytest_celery_py37 import LOCALSTACK_CREDS
 
     @pytest.fixture
     def default_worker_env(default_worker_env: dict) -> dict:
@@ -108,10 +108,10 @@ And to enable the Localstack broker in the default :ref:`setup-matrix`, add the 
 
 .. code-block:: python
 
-    from pytest_celery import ALL_CELERY_BROKERS
-    from pytest_celery import CELERY_LOCALSTACK_BROKER
-    from pytest_celery import CeleryTestBroker
-    from pytest_celery import _is_vendor_installed
+    from pytest_celery_py37 import ALL_CELERY_BROKERS
+    from pytest_celery_py37 import CELERY_LOCALSTACK_BROKER
+    from pytest_celery_py37 import CeleryTestBroker
+    from pytest_celery_py37 import _is_vendor_installed
 
     if _is_vendor_installed("localstack"):
         ALL_CELERY_BROKERS.add(CELERY_LOCALSTACK_BROKER)
@@ -135,7 +135,7 @@ that can be used to implement custom vendors.
 Custom Broker
 ~~~~~~~~~~~~~
 
-.. autoclass:: pytest_celery.api.broker.CeleryTestBroker
+.. autoclass:: pytest_celery_py37.api.broker.CeleryTestBroker
     :members:
     :undoc-members:
     :show-inheritance:
@@ -145,7 +145,7 @@ Custom Broker
 Custom Backend
 ~~~~~~~~~~~~~~
 
-.. autoclass:: pytest_celery.api.backend.CeleryTestBackend
+.. autoclass:: pytest_celery_py37.api.backend.CeleryTestBackend
     :members:
     :undoc-members:
     :show-inheritance:
@@ -155,7 +155,7 @@ Custom Backend
 Custom Worker
 ~~~~~~~~~~~~~
 
-.. autoclass:: pytest_celery.api.worker.CeleryTestWorker
+.. autoclass:: pytest_celery_py37.api.worker.CeleryTestWorker
     :members:
     :undoc-members:
     :show-inheritance:
@@ -264,11 +264,11 @@ And then, register it using the matching default fixture.
 
 There's no ``session`` vendor class for other vendors.
 
-- For RabbitMQ Broker use :func:`default_rabbitmq_broker_cls <pytest_celery.vendors.rabbitmq.fixtures.default_rabbitmq_broker_cls>`.
-- For Redis Broker use :func:`default_redis_broker_cls <pytest_celery.vendors.redis.broker.fixtures.default_redis_broker_cls>`.
-- For SQS Broker use :func:`default_localstack_broker_cls <pytest_celery.vendors.localstack.fixtures.default_localstack_broker_cls>`.
-- For Redis Backend use :func:`default_redis_backend_cls <pytest_celery.vendors.redis.backend.fixtures.default_redis_backend_cls>`.
-- For Memcache Backend use :func:`default_memcached_backend_cls <pytest_celery.vendors.memcached.fixtures.default_memcached_backend_cls>`.
+- For RabbitMQ Broker use :func:`default_rabbitmq_broker_cls <pytest_celery_py37.vendors.rabbitmq.fixtures.default_rabbitmq_broker_cls>`.
+- For Redis Broker use :func:`default_redis_broker_cls <pytest_celery_py37.vendors.redis.broker.fixtures.default_redis_broker_cls>`.
+- For SQS Broker use :func:`default_localstack_broker_cls <pytest_celery_py37.vendors.localstack.fixtures.default_localstack_broker_cls>`.
+- For Redis Backend use :func:`default_redis_backend_cls <pytest_celery_py37.vendors.redis.backend.fixtures.default_redis_backend_cls>`.
+- For Memcache Backend use :func:`default_memcached_backend_cls <pytest_celery_py37.vendors.memcached.fixtures.default_memcached_backend_cls>`.
 
 Accessing the Vendor Class
 --------------------------

@@ -42,7 +42,7 @@ For this example, we'll add a ``myfunc()`` using our own ``myutils.py`` module.
 
 .. code-block:: python
 
-    from pytest_celery.vendors.worker.content.utils import get_running_processes_info  # noqa
+    from pytest_celery_py37.vendors.worker.content.utils import get_running_processes_info  # noqa
 
 
     def myfunc():
@@ -56,7 +56,7 @@ For this example, we'll add a ``myfunc()`` using our own ``myutils.py`` module.
 conftest.py
 ~~~~~~~~~~~
 
-To inject our own module, we use the :func:`default_worker_utils_module <pytest_celery.vendors.worker.fixtures.default_worker_utils_module>` fixture.
+To inject our own module, we use the :func:`default_worker_utils_module <pytest_celery_py37.vendors.worker.fixtures.default_worker_utils_module>` fixture.
 
 .. code-block:: python
 

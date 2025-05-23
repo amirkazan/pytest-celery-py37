@@ -6,13 +6,13 @@ import pytest
 from pytest_docker_tools import container
 from pytest_docker_tools import fxtr
 
-from pytest_celery import RABBITMQ_CONTAINER_TIMEOUT
-from pytest_celery import RESULT_TIMEOUT
-from pytest_celery import CeleryBrokerCluster
-from pytest_celery import CeleryTestSetup
-from pytest_celery import CeleryTestWorker
-from pytest_celery import RabbitMQContainer
-from pytest_celery import RabbitMQTestBroker
+from pytest_celery_py37 import RABBITMQ_CONTAINER_TIMEOUT
+from pytest_celery_py37 import RESULT_TIMEOUT
+from pytest_celery_py37 import CeleryBrokerCluster
+from pytest_celery_py37 import CeleryTestSetup
+from pytest_celery_py37 import CeleryTestWorker
+from pytest_celery_py37 import RabbitMQContainer
+from pytest_celery_py37 import RabbitMQTestBroker
 from tests.tasks import identity
 
 failover_broker = container(

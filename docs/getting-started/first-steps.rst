@@ -57,15 +57,15 @@ This is considered the lowest layer, and is responsible for managing docker cont
 It is used to describe a docker container and manage its lifecycle.
 
 To represent a ``Dockerfile`` within the environment, implement a class that inherits from
-:class:`CeleryTestContainer <pytest_celery.api.container.CeleryTestContainer>`.
+:class:`CeleryTestContainer <pytest_celery_py37.api.container.CeleryTestContainer>`.
 
 The class is Celery-agnostic, and can be used to represent any container that is required for the test environment.
 
 There are three main types of containers.
 
-- :class:`Worker Container <pytest_celery.vendors.worker.container.CeleryWorkerContainer>`: Base class for Celery worker containers.
-- :class:`RabbitMQ Container <pytest_celery.vendors.rabbitmq.container.RabbitMQContainer>`: Base class for RabbitMQ containers.
-- :class:`Redis Container <pytest_celery.vendors.redis.container.RedisContainer>`: Base class for Redis containers.
+- :class:`Worker Container <pytest_celery_py37.vendors.worker.container.CeleryWorkerContainer>`: Base class for Celery worker containers.
+- :class:`RabbitMQ Container <pytest_celery_py37.vendors.rabbitmq.container.RabbitMQContainer>`: Base class for RabbitMQ containers.
+- :class:`Redis Container <pytest_celery_py37.vendors.redis.container.RedisContainer>`: Base class for Redis containers.
 
 These classes are Context-aware, and can be used to represent a container for their domain in the environment.
 
@@ -78,13 +78,13 @@ A test node is the logical representation of a :ref:`test container <test-contai
 It encapsulates the logic of a specific context and provides useful APIs to interact with the container.
 
 To represent a node within the environment, implement a class that inherits from
-:class:`CeleryTestNode <pytest_celery.api.base.CeleryTestNode>`.
+:class:`CeleryTestNode <pytest_celery_py37.api.base.CeleryTestNode>`.
 
 There are three main types of nodes.
 
-- :class:`Test Worker <pytest_celery.api.worker.CeleryTestWorker>`: Represents a Celery worker instance.
-- :class:`Test Broker <pytest_celery.api.broker.CeleryTestBroker>`: Represents a broker instance.
-- :class:`Test Backend <pytest_celery.api.backend.CeleryTestBackend>`: Represents a result backend instance.
+- :class:`Test Worker <pytest_celery_py37.api.worker.CeleryTestWorker>`: Represents a Celery worker instance.
+- :class:`Test Broker <pytest_celery_py37.api.broker.CeleryTestBroker>`: Represents a broker instance.
+- :class:`Test Backend <pytest_celery_py37.api.backend.CeleryTestBackend>`: Represents a result backend instance.
 
 All nodes are interchangeable within their domain, allowing plug-and-play style configuration when setting up
 the test environment. A node responsible for a specific component can be replaced with another node responsible
@@ -103,16 +103,16 @@ A test cluster is a collection of test nodes for a certain domain.
 **It is used as the entry point for the nodes into the test environment.**
 
 To represent a cluster within the environment, implement a class that inherits from
-:class:`CeleryTestCluster <pytest_celery.api.base.CeleryTestCluster>`.
+:class:`CeleryTestCluster <pytest_celery_py37.api.base.CeleryTestCluster>`.
 
 A test case does not load nodes directly, but rather loads a cluster, which in turn loads the nodes.
 By default, single-node clusters are used, but the user can define custom clusters to load multiple nodes.
 
 There are three main types of clusters.
 
-- :class:`Worker Cluster <pytest_celery.api.worker.CeleryWorkerCluster>`: Represents a cluster of Celery workers.
-- :class:`Broker Cluster <pytest_celery.api.broker.CeleryBrokerCluster>`: Represents a cluster of brokers.
-- :class:`Backend Cluster <pytest_celery.api.backend.CeleryBackendCluster>`: Represents a cluster of result backends.
+- :class:`Worker Cluster <pytest_celery_py37.api.worker.CeleryWorkerCluster>`: Represents a cluster of Celery workers.
+- :class:`Broker Cluster <pytest_celery_py37.api.broker.CeleryBrokerCluster>`: Represents a cluster of brokers.
+- :class:`Backend Cluster <pytest_celery_py37.api.backend.CeleryBackendCluster>`: Represents a cluster of result backends.
 
 .. _test-setup:
 
@@ -124,7 +124,7 @@ A test setup is the highest layer of the environment.
 the clusters and preparing the environment for the test case.**
 
 To represent a setup within the environment, implement a class that inherits from
-:class:`CeleryTestSetup <pytest_celery.api.setup.CeleryTestSetup>`.
+:class:`CeleryTestSetup <pytest_celery_py37.api.setup.CeleryTestSetup>`.
 
 .. note::
     By default, the default setup is configured by individually configuring each component in the environment
@@ -202,7 +202,7 @@ With more verbose test logs.
     Waiting for container to be ready......RabbitMQContainer::romantic_cannon is ready.
     Waiting for container to be ready.RedisContainer::gallant_carson is ready.
     Creating volume pytest-0d0ed18e-ae68-4d10-80d4-2d46ccd6d9a7
-    Building [REDACTED]/site-packages/pytest_celery/vendors/worker......................................................................
+    Building [REDACTED]/site-packages/pytest_celery_py37/vendors/worker......................................................................
     Waiting for container to be ready.Waiting for CeleryWorkerContainer::upbeat_feistel to get ready...
     CeleryWorkerContainer::upbeat_feistel is ready.
     RabbitMQContainer::romantic_cannon is ready.
@@ -248,7 +248,7 @@ With more verbose test logs.
     ============================= test session starts ==============================
     ...
 
-    tests/test_example.py::test_hello_world[celery_setup_worker-celery_redis_broker-celery_redis_backend] Building [REDACTED]/site-packages/pytest_celery/vendors/worker......................................................................
+    tests/test_example.py::test_hello_world[celery_setup_worker-celery_redis_broker-celery_redis_backend] Building [REDACTED]/site-packages/pytest_celery_py37/vendors/worker......................................................................
     Creating network pytest-134ab26c-2fa0-457b-b451-7c9f282760dd
     Waiting for container to be ready.RedisContainer::reverent_mendeleev is ready.
     Waiting for container to be ready.RedisContainer::beautiful_bouman is ready.
@@ -365,15 +365,15 @@ Test Worker
 
 These fixtures will generate a cluster with a single Celery worker node, based on the :ref:`built-in Dockerfile <built-in-worker>`.
 
-1. :func:`celery_worker <pytest_celery.fixtures.worker.celery_worker>`: Latest Celery worker node.
-2. :func:`celery_worker_cluster <pytest_celery.fixtures.worker.celery_worker_cluster>`: Single worker cluster for ``celery_worker``.
+1. :func:`celery_worker <pytest_celery_py37.fixtures.worker.celery_worker>`: Latest Celery worker node.
+2. :func:`celery_worker_cluster <pytest_celery_py37.fixtures.worker.celery_worker_cluster>`: Single worker cluster for ``celery_worker``.
 
 .. _celery-application:
 
 Celery Application
 -------------------
 
-The Celery app can be controlled by hooking into the :func:`default_worker_app <pytest_celery.vendors.worker.fixtures.default_worker_app>` fixture.
+The Celery app can be controlled by hooking into the :func:`default_worker_app <pytest_celery_py37.vendors.worker.fixtures.default_worker_app>` fixture.
 For example, we can control worker configuration like this:
 
 .. code-block:: python
@@ -419,8 +419,8 @@ Only changed fields will be shown.
 Tasks
 -----
 
-The available tasks can be controlled by hooking into the :func:`default_worker_tasks <pytest_celery.vendors.worker.fixtures.default_worker_tasks>` fixture.
-The plugin adds a :func:`ping task <pytest_celery.vendors.worker.tasks.ping>` by default, but you can add your own tasks like this:
+The available tasks can be controlled by hooking into the :func:`default_worker_tasks <pytest_celery_py37.vendors.worker.fixtures.default_worker_tasks>` fixture.
+The plugin adds a :func:`ping task <pytest_celery_py37.vendors.worker.tasks.ping>` by default, but you can add your own tasks like this:
 
 .. code-block:: python
 
@@ -435,7 +435,7 @@ Signals
 -------
 
 Signals handlers that needs to be injected into the worker, can be added by hooking into
-the :func:`default_worker_signals <pytest_celery.vendors.worker.fixtures.default_worker_signals>` fixture.
+the :func:`default_worker_signals <pytest_celery_py37.vendors.worker.fixtures.default_worker_signals>` fixture.
 
 .. code-block:: python
 
@@ -468,8 +468,8 @@ Test Broker
 These fixtures will generate a cluster with a single broker node, for each enabled broker :ref:`vendor <vendors>`.
 The test case will be parameterized for each available broker.
 
-1. :func:`celery_broker <pytest_celery.fixtures.broker.celery_broker>`: Parameterized fixture for all of the available brokers nodes.
-2. :func:`celery_broker_cluster <pytest_celery.fixtures.broker.celery_broker_cluster>`: Single broker cluster for ``celery_broker``.
+1. :func:`celery_broker <pytest_celery_py37.fixtures.broker.celery_broker>`: Parameterized fixture for all of the available brokers nodes.
+2. :func:`celery_broker_cluster <pytest_celery_py37.fixtures.broker.celery_broker_cluster>`: Single broker cluster for ``celery_broker``.
 
 The :ref:`RabbitMQ Management Example <examples_rabbitmq-management>` provides a good demonstration of how to override the default broker configuration,
 with a single ``rabbitmq:management`` broker instead of the broker matrix.
@@ -480,8 +480,8 @@ Test Backend
 These fixtures will generate a cluster with a single backend node, for each enabled backend :ref:`vendor <vendors>`.
 The test case will be parameterized for each available backend.
 
-1. :func:`celery_backend <pytest_celery.fixtures.backend.celery_backend>`: Parameterized fixture for all of the available backends nodes.
-2. :func:`celery_backend_cluster <pytest_celery.fixtures.backend.celery_backend_cluster>`: Single backend cluster for ``celery_backend``.
+1. :func:`celery_backend <pytest_celery_py37.fixtures.backend.celery_backend>`: Parameterized fixture for all of the available backends nodes.
+2. :func:`celery_backend_cluster <pytest_celery_py37.fixtures.backend.celery_backend_cluster>`: Single backend cluster for ``celery_backend``.
 
 .. _disable_backend:
 
@@ -513,7 +513,7 @@ Test Setup
 ~~~~~~~~~~
 
 Each component of the setup can be configured independently to allow modular control of the setup.
-Eventually, all of the components will be combined into the :func:`celery_setup <pytest_celery.fixtures.setup.celery_setup>` fixture, as
+Eventually, all of the components will be combined into the :func:`celery_setup <pytest_celery_py37.fixtures.setup.celery_setup>` fixture, as
 discussed :ref:`before <test-setup>`.
 
 Generally, the user should not hook into the ``celery_setup`` fixture directly.
@@ -537,7 +537,7 @@ Let's have a quick recap over what we just learned in this section then.
    * - **Configurable Components**
      - Each default component has its ``default_`` fixtures list, which can be used to control or extend the component's functionality.
    * - **Setup Matrix**
-     - The :func:`celery_setup <pytest_celery.fixtures.setup.celery_setup>` will generate a :ref:`setup-matrix` of isolated environments for each test case, based on the enabled components and their configurations.
+     - The :func:`celery_setup <pytest_celery_py37.fixtures.setup.celery_setup>` will generate a :ref:`setup-matrix` of isolated environments for each test case, based on the enabled components and their configurations.
 
 .. _built-in-components:
 
@@ -624,18 +624,18 @@ It uses the latest Celery release and its own :ref:`Dockerfile <built-in-worker>
 Container
 #########
 
-The :class:`CeleryWorkerContainer <pytest_celery.vendors.worker.container.CeleryWorkerContainer>` is used
+The :class:`CeleryWorkerContainer <pytest_celery_py37.vendors.worker.container.CeleryWorkerContainer>` is used
 to describe the :ref:`built-in-worker`.
 
 Node
 ####
 
-The :class:`CeleryTestWorker <pytest_celery.api.worker.CeleryTestWorker>` is used to represent the worker node.
+The :class:`CeleryTestWorker <pytest_celery_py37.api.worker.CeleryTestWorker>` is used to represent the worker node.
 
 Fixtures
 ########
 
-A list of available fixtures for the worker can be found in the :mod:`pytest_celery.vendors.worker.fixtures` module.
+A list of available fixtures for the worker can be found in the :mod:`pytest_celery_py37.vendors.worker.fixtures` module.
 
 .. _rabbitmq-broker:
 
@@ -647,18 +647,18 @@ The RabbitMQ broker uses the ``rabbitmq:latest`` version for the underlying cont
 Container
 #########
 
-The :class:`RabbitMQContainer <pytest_celery.vendors.rabbitmq.container.RabbitMQContainer>` is used
+The :class:`RabbitMQContainer <pytest_celery_py37.vendors.rabbitmq.container.RabbitMQContainer>` is used
 to describe the ``rabbitmq:latest`` docker image.
 
 Node
 ####
 
-The :class:`RabbitMQTestBroker <pytest_celery.vendors.rabbitmq.api.RabbitMQTestBroker>` is used to represent the broker node.
+The :class:`RabbitMQTestBroker <pytest_celery_py37.vendors.rabbitmq.api.RabbitMQTestBroker>` is used to represent the broker node.
 
 Fixtures
 ########
 
-A list of available fixtures for the broker can be found in the :mod:`pytest_celery.vendors.rabbitmq.fixtures` module.
+A list of available fixtures for the broker can be found in the :mod:`pytest_celery_py37.vendors.rabbitmq.fixtures` module.
 
 .. _redis-broker:
 
@@ -670,18 +670,18 @@ The Redis broker uses the ``redis:latest`` version for the underlying container.
 Container
 #########
 
-The :class:`RedisContainer <pytest_celery.vendors.redis.container.RedisContainer>` is used
+The :class:`RedisContainer <pytest_celery_py37.vendors.redis.container.RedisContainer>` is used
 to describe the ``redis:latest`` docker image.
 
 Node
 ####
 
-The :class:`RedisTestBroker <pytest_celery.vendors.redis.broker.api.RedisTestBroker>` is used to represent the broker node.
+The :class:`RedisTestBroker <pytest_celery_py37.vendors.redis.broker.api.RedisTestBroker>` is used to represent the broker node.
 
 Fixtures
 ########
 
-A list of available fixtures for the broker can be found in the :mod:`pytest_celery.vendors.redis.broker.fixtures` module.
+A list of available fixtures for the broker can be found in the :mod:`pytest_celery_py37.vendors.redis.broker.fixtures` module.
 
 .. _localstack-broker:
 
@@ -693,18 +693,18 @@ The Localstack broker uses the ``localstack/localstack`` version for the underly
 Container
 #########
 
-The :class:`LocalstackContainer <pytest_celery.vendors.localstack.container.LocalstackContainer>` is used
+The :class:`LocalstackContainer <pytest_celery_py37.vendors.localstack.container.LocalstackContainer>` is used
 to describe the ``localstack/localstack`` docker image.
 
 Node
 ####
 
-The :class:`LocalstackTestBroker <pytest_celery.vendors.localstack.api.LocalstackTestBroker>` is used to represent the broker node.
+The :class:`LocalstackTestBroker <pytest_celery_py37.vendors.localstack.api.LocalstackTestBroker>` is used to represent the broker node.
 
 Fixtures
 ########
 
-A list of available fixtures for the broker can be found in the :mod:`pytest_celery.vendors.localstack.fixtures` module.
+A list of available fixtures for the broker can be found in the :mod:`pytest_celery_py37.vendors.localstack.fixtures` module.
 
 .. _redis-backend:
 
@@ -716,18 +716,18 @@ The Redis backend uses the ``redis:latest`` version for the underlying container
 Container
 #########
 
-The :class:`RedisContainer <pytest_celery.vendors.redis.container.RedisContainer>` is used
+The :class:`RedisContainer <pytest_celery_py37.vendors.redis.container.RedisContainer>` is used
 to describe the ``redis:latest`` docker image.
 
 Node
 ####
 
-The :class:`RedisTestBackend <pytest_celery.vendors.redis.backend.api.RedisTestBackend>` is used to represent the backend node.
+The :class:`RedisTestBackend <pytest_celery_py37.vendors.redis.backend.api.RedisTestBackend>` is used to represent the backend node.
 
 Fixtures
 ########
 
-A list of available fixtures for the backend can be found in the :mod:`pytest_celery.vendors.redis.backend.fixtures` module.
+A list of available fixtures for the backend can be found in the :mod:`pytest_celery_py37.vendors.redis.backend.fixtures` module.
 
 .. _memcached-backend:
 
@@ -739,18 +739,18 @@ The Memcached backend uses the ``memcached:latest`` version for the underlying c
 Container
 #########
 
-The :class:`MemcachedContainer <pytest_celery.vendors.memcached.container.MemcachedContainer>` is used
+The :class:`MemcachedContainer <pytest_celery_py37.vendors.memcached.container.MemcachedContainer>` is used
 to describe the ``memcached:latest`` docker image.
 
 Node
 ####
 
-The :class:`MemcachedTestBackend <pytest_celery.vendors.memcached.api.MemcachedTestBackend>` is used to represent the backend node.
+The :class:`MemcachedTestBackend <pytest_celery_py37.vendors.memcached.api.MemcachedTestBackend>` is used to represent the backend node.
 
 Fixtures
 ########
 
-A list of available fixtures for the backend can be found in the :mod:`pytest_celery.vendors.memcached.fixtures` module.
+A list of available fixtures for the backend can be found in the :mod:`pytest_celery_py37.vendors.memcached.fixtures` module.
 
 .. warning::
 
@@ -889,10 +889,10 @@ Create a simple new project and try debugging the test case to understand how th
 
     import pytest
 
-    from pytest_celery import CeleryBrokerCluster
-    from pytest_celery import CeleryTestSetup
-    from pytest_celery import RabbitMQTestBroker
-    from pytest_celery import RedisTestBroker
+    from pytest_celery_py37 import CeleryBrokerCluster
+    from pytest_celery_py37 import CeleryTestSetup
+    from pytest_celery_py37 import RabbitMQTestBroker
+    from pytest_celery_py37 import RedisTestBroker
     from tests.tasks import noop
 
 

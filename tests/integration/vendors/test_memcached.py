@@ -2,8 +2,8 @@ from __future__ import annotations
 
 import pytest
 
-from pytest_celery import MemcachedContainer
-from pytest_celery import MemcachedTestBackend
+from pytest_celery_py37 import MemcachedContainer
+from pytest_celery_py37 import MemcachedTestBackend
 from tests.defaults import ALL_MEMCACHED_FIXTURES
 
 

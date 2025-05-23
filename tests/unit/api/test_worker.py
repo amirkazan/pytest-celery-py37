@@ -2,8 +2,8 @@ from __future__ import annotations
 
 from celery import Celery
 
-from pytest_celery import CeleryTestWorker
-from pytest_celery import CeleryWorkerCluster
+from pytest_celery_py37 import CeleryTestWorker
+from pytest_celery_py37 import CeleryWorkerCluster
 
 
 class test_celey_test_worker:

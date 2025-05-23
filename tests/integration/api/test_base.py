@@ -2,9 +2,9 @@ from __future__ import annotations
 
 import pytest
 
-from pytest_celery import CeleryTestCluster
-from pytest_celery import CeleryTestNode
-from pytest_celery import RedisTestBackend
+from pytest_celery_py37 import CeleryTestCluster
+from pytest_celery_py37 import CeleryTestNode
+from pytest_celery_py37 import RedisTestBackend
 
 
 class BaseNodes:

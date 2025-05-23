@@ -2,9 +2,9 @@ from __future__ import annotations
 
 import pytest
 
-from pytest_celery import RedisContainer
-from pytest_celery import RedisTestBackend
-from pytest_celery import RedisTestBroker
+from pytest_celery_py37 import RedisContainer
+from pytest_celery_py37 import RedisTestBackend
+from pytest_celery_py37 import RedisTestBroker
 from tests.defaults import ALL_REDIS_FIXTURES
 
 

@@ -52,7 +52,7 @@ This will set only the RabbitMQ broker and disable the default broker matrix.
         cluster.teardown()
 
 To control the version of the RabbitMQ broker, you can use the
-:func:`default_rabbitmq_broker_image <pytest_celery.vendors.rabbitmq.fixtures.default_rabbitmq_broker_image>` like this:
+:func:`default_rabbitmq_broker_image <pytest_celery_py37.vendors.rabbitmq.fixtures.default_rabbitmq_broker_image>` like this:
 
 .. code-block:: python
 
@@ -76,7 +76,7 @@ This will set only the Redis broker and disable the default broker matrix.
         cluster.teardown()
 
 To control the version of the Redis broker, you can use the
-:func:`default_redis_broker_image <pytest_celery.vendors.redis.broker.fixtures.default_redis_broker_image>` like this:
+:func:`default_redis_broker_image <pytest_celery_py37.vendors.redis.broker.fixtures.default_redis_broker_image>` like this:
 
 .. code-block:: python
 
@@ -104,7 +104,7 @@ This will set only the Redis backend and disable the default backend matrix.
         cluster.teardown()
 
 To control the version of the Redis backend, you can use the
-:func:`default_redis_backend_image <pytest_celery.vendors.redis.backend.fixtures.default_redis_backend_image>` like this:
+:func:`default_redis_backend_image <pytest_celery_py37.vendors.redis.backend.fixtures.default_redis_backend_image>` like this:
 
 .. code-block:: python
 
@@ -126,7 +126,7 @@ This will set only the Memcached backend and disable the default backend matrix.
         cluster.teardown()
 
 To control the version of the Memcached backend, you can use the
-:func:`default_memcached_backend_image <pytest_celery.vendors.memcached.fixtures.default_memcached_backend_image>` like this:
+:func:`default_memcached_backend_image <pytest_celery_py37.vendors.memcached.fixtures.default_memcached_backend_image>` like this:
 
 .. code-block:: python
 
@@ -157,7 +157,7 @@ This will set the built-in worker to a specific Celery release.
 
 .. warning::
 
-    The :func:`default_worker_celery_version <pytest_celery.vendors.worker.fixtures.default_worker_celery_version>` is used
+    The :func:`default_worker_celery_version <pytest_celery_py37.vendors.worker.fixtures.default_worker_celery_version>` is used
     with the ``pip`` install method, so it should be a valid version that can be installed from PyPI.
 
 .. tip::
@@ -174,19 +174,19 @@ It will automatically set up a `dev <https://github.com/celery/celery/blob/main/
 Tasks and Signals
 ~~~~~~~~~~~~~~~~~
 
-The plugin provides :ref:`default-tasks` by default. For example, to use the :func:`ping task <pytest_celery.vendors.worker.tasks.ping>`,
+The plugin provides :ref:`default-tasks` by default. For example, to use the :func:`ping task <pytest_celery_py37.vendors.worker.tasks.ping>`,
 import it from the plugin.
 
 .. code-block:: python
 
-    from pytest_celery import ping
+    from pytest_celery_py37 import ping
 
 The worker will already have it registered by default using the default worker volume.
 
 Adding New Tasks
 ----------------
 
-To add new tasks, create a new ``tasks.py`` module and use the :func:`default_worker_tasks <pytest_celery.vendors.worker.fixtures.default_worker_tasks>` fixture
+To add new tasks, create a new ``tasks.py`` module and use the :func:`default_worker_tasks <pytest_celery_py37.vendors.worker.fixtures.default_worker_tasks>` fixture
 to inject the tasks into the worker as described in the :ref:`injecting-tasks` section.
 
 For example, the tasks module can look like this:
@@ -234,7 +234,7 @@ For example,
 
 .. code-block:: python
 
-    from pytest_celery import CeleryTestSetup
+    from pytest_celery_py37 import CeleryTestSetup
 
     from t.integration.tasks import identity
 
@@ -358,14 +358,14 @@ celery_bug_report.py
     from t.integration.tasks import identity
     from t.smoke.workers.dev import SmokeWorkerContainer
 
-    from pytest_celery import RABBITMQ_PORTS
-    from pytest_celery import WORKER_DEBUGPY_PORTS
-    from pytest_celery import CeleryBackendCluster
-    from pytest_celery import CeleryBrokerCluster
-    from pytest_celery import CeleryTestSetup
-    from pytest_celery import RabbitMQContainer
-    from pytest_celery import RabbitMQTestBroker
-    from pytest_celery import RedisTestBackend
+    from pytest_celery_py37 import RABBITMQ_PORTS
+    from pytest_celery_py37 import WORKER_DEBUGPY_PORTS
+    from pytest_celery_py37 import CeleryBackendCluster
+    from pytest_celery_py37 import CeleryBrokerCluster
+    from pytest_celery_py37 import CeleryTestSetup
+    from pytest_celery_py37 import RabbitMQContainer
+    from pytest_celery_py37 import RabbitMQTestBroker
+    from pytest_celery_py37 import RedisTestBackend
 
     ###############################################################################
     # RabbitMQ Management Broker

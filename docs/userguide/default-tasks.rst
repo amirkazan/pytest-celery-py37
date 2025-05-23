@@ -14,13 +14,13 @@ To import the tasks, you can use the following code:
 
 .. code-block:: python
 
-    from pytest_celery import the, tasks, you, want
+    from pytest_celery_py37 import the, tasks, you, want
 
 or
 
 .. code-block:: python
 
-    from pytest_celery.vendors.worker import tasks
+    from pytest_celery_py37.vendors.worker import tasks
 
 .. tip::
 
@@ -39,9 +39,9 @@ add
 
 .. versionadded:: 1.0.0
 
-.. literalinclude:: ../../src/pytest_celery/vendors/worker/tasks.py
+.. literalinclude:: ../../src/pytest_celery_py37/vendors/worker/tasks.py
     :language: python
-    :caption: pytest_celery.vendors.worker.tasks
+    :caption: pytest_celery_py37.vendors.worker.tasks
     :start-after: # ------------- add -------------
     :end-before: # ------------- add_replaced -------------
 
@@ -50,9 +50,9 @@ add_replaced
 
 .. versionadded:: 1.0.0
 
-.. literalinclude:: ../../src/pytest_celery/vendors/worker/tasks.py
+.. literalinclude:: ../../src/pytest_celery_py37/vendors/worker/tasks.py
     :language: python
-    :caption: pytest_celery.vendors.worker.tasks
+    :caption: pytest_celery_py37.vendors.worker.tasks
     :start-after: # ------------- add_replaced -------------
     :end-before: # ------------- fail -------------
 
@@ -61,9 +61,9 @@ fail
 
 .. versionadded:: 1.0.0
 
-.. literalinclude:: ../../src/pytest_celery/vendors/worker/tasks.py
+.. literalinclude:: ../../src/pytest_celery_py37/vendors/worker/tasks.py
     :language: python
-    :caption: pytest_celery.vendors.worker.tasks
+    :caption: pytest_celery_py37.vendors.worker.tasks
     :start-after: # ------------- fail -------------
     :end-before: # ------------- identity -------------
 
@@ -72,9 +72,9 @@ identity
 
 .. versionadded:: 1.0.0
 
-.. literalinclude:: ../../src/pytest_celery/vendors/worker/tasks.py
+.. literalinclude:: ../../src/pytest_celery_py37/vendors/worker/tasks.py
     :language: python
-    :caption: pytest_celery.vendors.worker.tasks
+    :caption: pytest_celery_py37.vendors.worker.tasks
     :start-after: # ------------- identity -------------
     :end-before: # ------------- noop -------------
 
@@ -83,9 +83,9 @@ noop
 
 .. versionadded:: 1.0.0
 
-.. literalinclude:: ../../src/pytest_celery/vendors/worker/tasks.py
+.. literalinclude:: ../../src/pytest_celery_py37/vendors/worker/tasks.py
     :language: python
-    :caption: pytest_celery.vendors.worker.tasks
+    :caption: pytest_celery_py37.vendors.worker.tasks
     :start-after: # ------------- noop -------------
     :end-before: # ------------- ping -------------
 
@@ -94,9 +94,9 @@ ping
 
 .. versionadded:: 1.0.0
 
-.. literalinclude:: ../../src/pytest_celery/vendors/worker/tasks.py
+.. literalinclude:: ../../src/pytest_celery_py37/vendors/worker/tasks.py
     :language: python
-    :caption: pytest_celery.vendors.worker.tasks
+    :caption: pytest_celery_py37.vendors.worker.tasks
     :start-after: # ------------- ping -------------
     :end-before: # ------------- sleep -------------
 
@@ -105,9 +105,9 @@ sleep
 
 .. versionadded:: 1.0.0
 
-.. literalinclude:: ../../src/pytest_celery/vendors/worker/tasks.py
+.. literalinclude:: ../../src/pytest_celery_py37/vendors/worker/tasks.py
     :language: python
-    :caption: pytest_celery.vendors.worker.tasks
+    :caption: pytest_celery_py37.vendors.worker.tasks
     :start-after: # ------------- sleep -------------
     :end-before: # ------------- xsum -------------
 
@@ -116,7 +116,7 @@ xsum
 
 .. versionadded:: 1.0.0
 
-.. literalinclude:: ../../src/pytest_celery/vendors/worker/tasks.py
+.. literalinclude:: ../../src/pytest_celery_py37/vendors/worker/tasks.py
     :language: python
-    :caption: pytest_celery.vendors.worker.tasks
+    :caption: pytest_celery_py37.vendors.worker.tasks
     :start-after: # ------------- xsum -------------

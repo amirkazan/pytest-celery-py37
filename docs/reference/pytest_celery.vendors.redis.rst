@@ -7,8 +7,8 @@ Subpackages
 .. toctree::
    :maxdepth: 4
 
-   pytest_celery.vendors.redis.backend
-   pytest_celery.vendors.redis.broker
+   pytest_celery_py37.vendors.redis.backend
+   pytest_celery_py37.vendors.redis.broker
 
 Submodules
 ----------
@@ -16,7 +16,7 @@ Submodules
 pytest\_celery.vendors.redis.container module
 ---------------------------------------------
 
-.. automodule:: pytest_celery.vendors.redis.container
+.. automodule:: pytest_celery_py37.vendors.redis.container
    :members:
    :undoc-members:
    :show-inheritance:
@@ -24,7 +24,7 @@ pytest\_celery.vendors.redis.container module
 pytest\_celery.vendors.redis.defaults module
 --------------------------------------------
 
-.. automodule:: pytest_celery.vendors.redis.defaults
+.. automodule:: pytest_celery_py37.vendors.redis.defaults
    :members:
    :undoc-members:
    :show-inheritance:
@@ -32,7 +32,7 @@ pytest\_celery.vendors.redis.defaults module
 Module contents
 ---------------
 
-.. automodule:: pytest_celery.vendors.redis
+.. automodule:: pytest_celery_py37.vendors.redis
    :members:
    :undoc-members:
    :show-inheritance:

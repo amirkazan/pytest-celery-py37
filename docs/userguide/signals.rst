@@ -36,7 +36,7 @@ Signal handlers modules injection
 
 .. versionadded:: 1.0.0
 
-To add your own signal handlers, use the :func:`default_worker_signals <pytest_celery.vendors.worker.fixtures.default_worker_signals>` fixture.
+To add your own signal handlers, use the :func:`default_worker_signals <pytest_celery_py37.vendors.worker.fixtures.default_worker_signals>` fixture.
 
 .. code-block:: python
 

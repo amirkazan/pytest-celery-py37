@@ -4,11 +4,11 @@ import pytest
 from celery.canvas import Signature
 from celery.result import AsyncResult
 
-from pytest_celery import RESULT_TIMEOUT
-from pytest_celery import CeleryTestSetup
-from pytest_celery import CeleryTestWorker
-from pytest_celery import CeleryWorkerContainer
-from pytest_celery import ping
+from pytest_celery_py37 import RESULT_TIMEOUT
+from pytest_celery_py37 import CeleryTestSetup
+from pytest_celery_py37 import CeleryTestWorker
+from pytest_celery_py37 import CeleryWorkerContainer
+from pytest_celery_py37 import ping
 
 
 class SoloPoolWorker(CeleryWorkerContainer):

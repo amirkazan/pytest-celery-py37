@@ -2,7 +2,7 @@ from types import ModuleType
 
 import pytest
 
-from pytest_celery import CeleryTestWorker
+from pytest_celery_py37 import CeleryTestWorker
 
 
 @pytest.fixture

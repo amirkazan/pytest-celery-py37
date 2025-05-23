@@ -1,15 +1,15 @@
 import pytest
 
-from pytest_celery import RESULT_TIMEOUT
-from pytest_celery import CeleryTestSetup
-from pytest_celery import add
-from pytest_celery import add_replaced
-from pytest_celery import fail
-from pytest_celery import identity
-from pytest_celery import noop
-from pytest_celery import ping
-from pytest_celery import sleep
-from pytest_celery import xsum
+from pytest_celery_py37 import RESULT_TIMEOUT
+from pytest_celery_py37 import CeleryTestSetup
+from pytest_celery_py37 import add
+from pytest_celery_py37 import add_replaced
+from pytest_celery_py37 import fail
+from pytest_celery_py37 import identity
+from pytest_celery_py37 import noop
+from pytest_celery_py37 import ping
+from pytest_celery_py37 import sleep
+from pytest_celery_py37 import xsum
 
 
 class test_default_tasks:

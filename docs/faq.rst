@@ -66,7 +66,7 @@ the component into the environment as described in the :ref:`architecture-inject
 How can I manage worker concurrency settings in pytest-celery?
 --------------------------------------------------------------
 
-**Answer:** Using the :func:`default_worker_app <pytest_celery.vendors.worker.fixtures.default_worker_app>` fixture.
+**Answer:** Using the :func:`default_worker_app <pytest_celery_py37.vendors.worker.fixtures.default_worker_app>` fixture.
 
 .. code-block:: python
 
@@ -89,7 +89,7 @@ Debugging and Troubleshooting
 Why doesn't the worker recognize my tasks?
 ------------------------------------------
 
-**Answer:** Because you don't use the :func:`default_worker_tasks <pytest_celery.vendors.worker.fixtures.default_worker_tasks>` fixture.
+**Answer:** Because you don't use the :func:`default_worker_tasks <pytest_celery_py37.vendors.worker.fixtures.default_worker_tasks>` fixture.
 
 .. code-block:: python
 
@@ -105,7 +105,7 @@ For more details, see :ref:`injecting-tasks`.
 Why aren't my consumer signal handlers triggering?
 --------------------------------------------------
 
-**Answer:** Because you don't use the :func:`default_worker_signals <pytest_celery.vendors.worker.fixtures.default_worker_signals>` fixture.
+**Answer:** Because you don't use the :func:`default_worker_signals <pytest_celery_py37.vendors.worker.fixtures.default_worker_signals>` fixture.
 
 .. code-block:: python
 

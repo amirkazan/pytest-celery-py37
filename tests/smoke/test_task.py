@@ -2,8 +2,8 @@ from __future__ import annotations
 
 from celery import signature
 
-from pytest_celery import RESULT_TIMEOUT
-from pytest_celery import CeleryTestSetup
+from pytest_celery_py37 import RESULT_TIMEOUT
+from pytest_celery_py37 import CeleryTestSetup
 from tests.tasks import add
 from tests.tasks import identity
 from tests.tasks import replace_with_task

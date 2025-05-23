@@ -5,9 +5,9 @@ from celery.canvas import chord
 from celery.canvas import group
 from celery.canvas import signature
 
-from pytest_celery import RESULT_TIMEOUT
-from pytest_celery import CeleryTestSetup
-from pytest_celery import CeleryTestWorker
+from pytest_celery_py37 import RESULT_TIMEOUT
+from pytest_celery_py37 import CeleryTestSetup
+from pytest_celery_py37 import CeleryTestWorker
 from tests.tasks import add
 from tests.tasks import identity
 

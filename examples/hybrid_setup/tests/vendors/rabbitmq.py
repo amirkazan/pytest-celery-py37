@@ -2,12 +2,12 @@ import pytest
 from pytest_docker_tools import container
 from pytest_docker_tools import fetch
 
-from pytest_celery import RABBITMQ_CONTAINER_TIMEOUT
-from pytest_celery import RABBITMQ_ENV
-from pytest_celery import RABBITMQ_IMAGE
-from pytest_celery import RABBITMQ_PORTS
-from pytest_celery import RabbitMQContainer
-from pytest_celery import RabbitMQTestBroker
+from pytest_celery_py37 import RABBITMQ_CONTAINER_TIMEOUT
+from pytest_celery_py37 import RABBITMQ_ENV
+from pytest_celery_py37 import RABBITMQ_IMAGE
+from pytest_celery_py37 import RABBITMQ_PORTS
+from pytest_celery_py37 import RabbitMQContainer
+from pytest_celery_py37 import RabbitMQTestBroker
 
 rabbitmq_image = fetch(repository=RABBITMQ_IMAGE)
 

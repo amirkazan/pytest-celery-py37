@@ -4,10 +4,10 @@ from types import ModuleType
 
 import pytest
 
-from pytest_celery import DEFAULT_WORKER_ENV
-from pytest_celery import CeleryBackendCluster
-from pytest_celery import CeleryTestWorker
-from pytest_celery import CeleryWorkerContainer
+from pytest_celery_py37 import DEFAULT_WORKER_ENV
+from pytest_celery_py37 import CeleryBackendCluster
+from pytest_celery_py37 import CeleryTestWorker
+from pytest_celery_py37 import CeleryWorkerContainer
 from tests.defaults import ALL_WORKERS_FIXTURES
 
 
@@ -43,7 +43,7 @@ class test_celery_worker_container:
             if request.param == "Default":
                 return request.getfixturevalue("default_worker_app_module")
             else:
-                from pytest_celery.vendors.worker.content import app
+                from pytest_celery_py37.vendors.worker.content import app
 
                 return app
 

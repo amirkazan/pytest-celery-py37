@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from pytest_celery import CeleryTestSetup
+from pytest_celery_py37 import CeleryTestSetup
 
 
 class test_control:

@@ -1,9 +1,9 @@
 import pytest
 
-from pytest_celery import RABBITMQ_PORTS
-from pytest_celery import CeleryBrokerCluster
-from pytest_celery import RabbitMQContainer
-from pytest_celery import RabbitMQTestBroker
+from pytest_celery_py37 import RABBITMQ_PORTS
+from pytest_celery_py37 import CeleryBrokerCluster
+from pytest_celery_py37 import RabbitMQContainer
+from pytest_celery_py37 import RabbitMQTestBroker
 
 
 @pytest.fixture

@@ -2,12 +2,12 @@ from __future__ import annotations
 
 import pytest
 
-from pytest_celery import RABBITMQ_ENV
-from pytest_celery import RABBITMQ_IMAGE
-from pytest_celery import RABBITMQ_PORTS
-from pytest_celery import RABBITMQ_PREFIX
-from pytest_celery import RabbitMQContainer
-from pytest_celery import RabbitMQTestBroker
+from pytest_celery_py37 import RABBITMQ_ENV
+from pytest_celery_py37 import RABBITMQ_IMAGE
+from pytest_celery_py37 import RABBITMQ_PORTS
+from pytest_celery_py37 import RABBITMQ_PREFIX
+from pytest_celery_py37 import RabbitMQContainer
+from pytest_celery_py37 import RabbitMQTestBroker
 
 
 class test_rabbitmq_container:

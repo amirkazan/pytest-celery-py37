@@ -3,8 +3,8 @@ from __future__ import annotations
 import pytest
 from kombu import Connection
 
-from pytest_celery import RabbitMQContainer
-from pytest_celery import RabbitMQTestBroker
+from pytest_celery_py37 import RabbitMQContainer
+from pytest_celery_py37 import RabbitMQTestBroker
 from tests.defaults import ALL_RABBITMQ_FIXTURES
 
 

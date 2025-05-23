@@ -4,8 +4,8 @@ import pytest
 from celery.signals import after_task_publish
 from celery.signals import before_task_publish
 
-from pytest_celery import CeleryTestSetup
-from pytest_celery import LocalstackTestBroker
+from pytest_celery_py37 import CeleryTestSetup
+from pytest_celery_py37 import LocalstackTestBroker
 from tests.tasks import noop
 
 

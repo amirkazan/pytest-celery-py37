@@ -3,13 +3,13 @@ from __future__ import annotations
 import pytest
 from celery import Celery
 
-from pytest_celery import CeleryBackendCluster
-from pytest_celery import CeleryBrokerCluster
-from pytest_celery import CeleryTestBackend
-from pytest_celery import CeleryTestBroker
-from pytest_celery import CeleryTestSetup
-from pytest_celery import CeleryTestWorker
-from pytest_celery import CeleryWorkerCluster
+from pytest_celery_py37 import CeleryBackendCluster
+from pytest_celery_py37 import CeleryBrokerCluster
+from pytest_celery_py37 import CeleryTestBackend
+from pytest_celery_py37 import CeleryTestBroker
+from pytest_celery_py37 import CeleryTestSetup
+from pytest_celery_py37 import CeleryTestWorker
+from pytest_celery_py37 import CeleryWorkerCluster
 
 
 class test_celery_test_setup_unit:

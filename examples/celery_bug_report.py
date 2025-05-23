@@ -5,14 +5,14 @@ from celery import Celery
 from celery.canvas import Signature
 from celery.result import AsyncResult
 
-from pytest_celery import RABBITMQ_PORTS
-from pytest_celery import CeleryBackendCluster
-from pytest_celery import CeleryBrokerCluster
-from pytest_celery import CeleryTestSetup
-from pytest_celery import RabbitMQContainer
-from pytest_celery import RabbitMQTestBroker
-from pytest_celery import RedisTestBackend
-from pytest_celery import ping
+from pytest_celery_py37 import RABBITMQ_PORTS
+from pytest_celery_py37 import CeleryBackendCluster
+from pytest_celery_py37 import CeleryBrokerCluster
+from pytest_celery_py37 import CeleryTestSetup
+from pytest_celery_py37 import RabbitMQContainer
+from pytest_celery_py37 import RabbitMQTestBroker
+from pytest_celery_py37 import RedisTestBackend
+from pytest_celery_py37 import ping
 
 ###############################################################################
 # RabbitMQ Management Broker

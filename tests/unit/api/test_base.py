@@ -7,9 +7,9 @@ import pytest
 import pytest_docker_tools
 from celery import Celery
 
-from pytest_celery import CeleryTestCluster
-from pytest_celery import CeleryTestContainer
-from pytest_celery import CeleryTestNode
+from pytest_celery_py37 import CeleryTestCluster
+from pytest_celery_py37 import CeleryTestContainer
+from pytest_celery_py37 import CeleryTestNode
 from tests.unit.conftest import mocked_container
 
 
@@ -92,13 +92,13 @@ class test_celery_test_node:
         node.assert_log_exists("", "test_celey_test_worker.test_assert_log_exists")
 
     def test_assert_log_exists_assertion_error(self, node: CeleryTestNode):
-        with patch("pytest_celery.api.base.wait_for_callable", new=Mock()) as mocked_wait_for_callable:
+        with patch("pytest_celery_py37.api.base.wait_for_callable", new=Mock()) as mocked_wait_for_callable:
             mocked_wait_for_callable.side_effect = pytest_docker_tools.exceptions.TimeoutError
             with pytest.raises(AssertionError):
                 node.assert_log_exists("", "test_celey_test_worker.test_assert_log_exists_assertion_error")
 
     def test_assert_log_does_not_exist(self, node: CeleryTestNode):
-        with patch("pytest_celery.api.base.wait_for_callable", new=Mock()) as mocked_wait_for_callable:
+        with patch("pytest_celery_py37.api.base.wait_for_callable", new=Mock()) as mocked_wait_for_callable:
             mocked_wait_for_callable.side_effect = pytest_docker_tools.exceptions.TimeoutError
             node.assert_log_does_not_exist("", "test_celey_test_worker.test_assert_log_does_not_exist")
 

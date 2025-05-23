@@ -7,7 +7,7 @@ Submodules
 pytest\_celery.vendors.memcached.api module
 -------------------------------------------
 
-.. automodule:: pytest_celery.vendors.memcached.api
+.. automodule:: pytest_celery_py37.vendors.memcached.api
    :members:
    :undoc-members:
    :show-inheritance:
@@ -15,7 +15,7 @@ pytest\_celery.vendors.memcached.api module
 pytest\_celery.vendors.memcached.container module
 -------------------------------------------------
 
-.. automodule:: pytest_celery.vendors.memcached.container
+.. automodule:: pytest_celery_py37.vendors.memcached.container
    :members:
    :undoc-members:
    :show-inheritance:
@@ -23,7 +23,7 @@ pytest\_celery.vendors.memcached.container module
 pytest\_celery.vendors.memcached.defaults module
 ------------------------------------------------
 
-.. automodule:: pytest_celery.vendors.memcached.defaults
+.. automodule:: pytest_celery_py37.vendors.memcached.defaults
    :members:
    :undoc-members:
    :show-inheritance:
@@ -31,7 +31,7 @@ pytest\_celery.vendors.memcached.defaults module
 pytest\_celery.vendors.memcached.fixtures module
 ------------------------------------------------
 
-.. automodule:: pytest_celery.vendors.memcached.fixtures
+.. automodule:: pytest_celery_py37.vendors.memcached.fixtures
    :members:
    :undoc-members:
    :show-inheritance:
@@ -39,7 +39,7 @@ pytest\_celery.vendors.memcached.fixtures module
 Module contents
 ---------------
 
-.. automodule:: pytest_celery.vendors.memcached
+.. automodule:: pytest_celery_py37.vendors.memcached
    :members:
    :undoc-members:
    :show-inheritance:

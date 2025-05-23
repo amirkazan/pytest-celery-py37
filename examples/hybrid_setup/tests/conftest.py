@@ -3,11 +3,11 @@
 import pytest
 from pytest_docker_tools import network
 
-from pytest_celery import CeleryBackendCluster
-from pytest_celery import CeleryBrokerCluster
-from pytest_celery import CeleryTestWorker
-from pytest_celery import CeleryWorkerCluster
-from pytest_celery import MemcachedTestBackend
+from pytest_celery_py37 import CeleryBackendCluster
+from pytest_celery_py37 import CeleryBrokerCluster
+from pytest_celery_py37 import CeleryTestWorker
+from pytest_celery_py37 import CeleryWorkerCluster
+from pytest_celery_py37 import MemcachedTestBackend
 from tests.vendors.memcached import *
 from tests.vendors.rabbitmq import *
 from tests.vendors.workers.gevent import *

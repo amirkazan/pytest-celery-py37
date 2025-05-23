@@ -2,7 +2,7 @@ import celery.utils
 from celery import shared_task
 from celery.canvas import group
 
-from pytest_celery import RESULT_TIMEOUT
+from pytest_celery_py37 import RESULT_TIMEOUT
 
 
 @shared_task

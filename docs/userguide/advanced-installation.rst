@@ -62,7 +62,7 @@ To use the experimental vendors, you will need to configure the setup matrix man
 
 .. tip::
 
-    The automatic vendors detection is implemented in :mod:`defaults.py <pytest_celery.defaults>`.
+    The automatic vendors detection is implemented in :mod:`defaults.py <pytest_celery_py37.defaults>`.
 
 The ``all`` Extra
 ~~~~~~~~~~~~~~~~~

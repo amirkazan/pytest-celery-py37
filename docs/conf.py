@@ -1,9 +1,9 @@
 from sphinx_celery import conf
 
 config = conf.build_config(
-    "pytest_celery",
+    "pytest_celery_py37",
     __file__,
-    project="pytest_celery",
+    project="pytest_celery_py37",
     version_dev="1.2",
     version_stable="1.1",
     canonical_url="https://pytest-celery.readthedocs.io/",

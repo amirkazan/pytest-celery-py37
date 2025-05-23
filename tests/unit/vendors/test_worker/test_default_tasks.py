@@ -3,14 +3,14 @@ from unittest.mock import patch
 import pytest
 from celery.exceptions import Ignore
 
-from pytest_celery import add
-from pytest_celery import add_replaced
-from pytest_celery import fail
-from pytest_celery import identity
-from pytest_celery import noop
-from pytest_celery import ping
-from pytest_celery import sleep
-from pytest_celery import xsum
+from pytest_celery_py37 import add
+from pytest_celery_py37 import add_replaced
+from pytest_celery_py37 import fail
+from pytest_celery_py37 import identity
+from pytest_celery_py37 import noop
+from pytest_celery_py37 import ping
+from pytest_celery_py37 import sleep
+from pytest_celery_py37 import xsum
 
 
 class test_default_tasks:
@@ -18,7 +18,7 @@ class test_default_tasks:
         assert add(1, 2) == 3
 
     def test_add_replaced(self):
-        with patch("pytest_celery.add_replaced.replace", side_effect=Ignore):
+        with patch("pytest_celery_py37.add_replaced.replace", side_effect=Ignore):
             with pytest.raises(Ignore):
                 add_replaced(1, 2)
 

@@ -1,13 +1,13 @@
 import pytest
 
-import pytest_celery
+import pytest_celery_py37
 
 
 def test_version():
-    assert pytest_celery.VERSION
-    assert len(pytest_celery.VERSION) >= 3
-    pytest_celery.VERSION = (0, 3, 0)
-    assert pytest_celery.__version__.count(".") >= 2
+    assert pytest_celery_py37.VERSION
+    assert len(pytest_celery_py37.VERSION) >= 3
+    pytest_celery_py37.VERSION = (0, 3, 0)
+    assert pytest_celery_py37.__version__.count(".") >= 2
 
 
 @pytest.mark.parametrize(
@@ -20,4 +20,4 @@ def test_version():
     ],
 )
 def test_meta(attr):
-    assert getattr(pytest_celery, attr, None)
+    assert getattr(pytest_celery_py37, attr, None)

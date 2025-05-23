@@ -2,10 +2,10 @@ from __future__ import annotations
 
 import pytest
 
-from pytest_celery import CeleryBrokerCluster
-from pytest_celery import CeleryTestBroker
-from pytest_celery import CeleryTestCluster
-from pytest_celery import CeleryTestNode
+from pytest_celery_py37 import CeleryBrokerCluster
+from pytest_celery_py37 import CeleryTestBroker
+from pytest_celery_py37 import CeleryTestCluster
+from pytest_celery_py37 import CeleryTestNode
 from tests.integration.api.test_base import BaseCluster
 from tests.integration.api.test_base import BaseNodes
 

@@ -3,17 +3,17 @@ from unittest.mock import patch
 
 import pytest
 
-from pytest_celery import CeleryWorkerContainer
-from pytest_celery import LocalstackContainer
-from pytest_celery import MemcachedContainer
-from pytest_celery import RabbitMQContainer
-from pytest_celery import RedisContainer
+from pytest_celery_py37 import CeleryWorkerContainer
+from pytest_celery_py37 import LocalstackContainer
+from pytest_celery_py37 import MemcachedContainer
+from pytest_celery_py37 import RabbitMQContainer
+from pytest_celery_py37 import RedisContainer
 
 
 @pytest.fixture(autouse=True)
 def mock_wait_for_callable():
-    with patch("pytest_celery.api.base.wait_for_callable", new=Mock()):
-        with patch("pytest_celery.api.container.wait_for_callable", new=Mock()):
+    with patch("pytest_celery_py37.api.base.wait_for_callable", new=Mock()):
+        with patch("pytest_celery_py37.api.container.wait_for_callable", new=Mock()):
             yield
 
 

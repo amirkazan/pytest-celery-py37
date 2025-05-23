@@ -3,7 +3,7 @@ from celery import shared_task
 from celery import signature
 from celery.canvas import Signature
 
-from pytest_celery.vendors.worker.tasks import *  # noqa
+from pytest_celery_py37.vendors.worker.tasks import *  # noqa
 
 
 @shared_task

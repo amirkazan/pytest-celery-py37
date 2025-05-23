@@ -103,7 +103,7 @@ we'll split the file into three parts.
 test_hybrid_setup.py
 ~~~~~~~~~~~~~~~~~~~~
 
-Every test case that uses the :func:`celery_setup <pytest_celery.fixtures.setup.celery_setup>` fixture will run
+Every test case that uses the :func:`celery_setup <pytest_celery_py37.fixtures.setup.celery_setup>` fixture will run
 its scenario on the setup that was configured in the ``conftest.py`` file.
 
 For this example, we have the following test cases.
@@ -116,7 +116,7 @@ For this example, we have the following test cases.
 .. tip::
 
     The components themselves can be used in the test case to easily access their attributes and methods, like shown
-    in the failover test case. When used without the :func:`celery_setup <pytest_celery.fixtures.setup.celery_setup>`
+    in the failover test case. When used without the :func:`celery_setup <pytest_celery_py37.fixtures.setup.celery_setup>`
     fixture, the components will run independently and might not be aware of each other.
 
 rabbitmq.py and memcached.py

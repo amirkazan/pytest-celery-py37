@@ -3,9 +3,9 @@ from __future__ import annotations
 import pytest
 from celery import Celery
 
-from pytest_celery import DEFAULT_WORKER_ENV
-from pytest_celery import CeleryBackendCluster
-from pytest_celery import CeleryTestBackend
+from pytest_celery_py37 import DEFAULT_WORKER_ENV
+from pytest_celery_py37 import CeleryBackendCluster
+from pytest_celery_py37 import CeleryTestBackend
 
 
 class test_celey_test_backend:

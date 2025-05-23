@@ -2,12 +2,12 @@ import pytest
 from pytest_docker_tools import container
 from pytest_docker_tools import fetch
 
-from pytest_celery import MEMCACHED_CONTAINER_TIMEOUT
-from pytest_celery import MEMCACHED_ENV
-from pytest_celery import MEMCACHED_IMAGE
-from pytest_celery import MEMCACHED_PORTS
-from pytest_celery import MemcachedContainer
-from pytest_celery import MemcachedTestBackend
+from pytest_celery_py37 import MEMCACHED_CONTAINER_TIMEOUT
+from pytest_celery_py37 import MEMCACHED_ENV
+from pytest_celery_py37 import MEMCACHED_IMAGE
+from pytest_celery_py37 import MEMCACHED_PORTS
+from pytest_celery_py37 import MemcachedContainer
+from pytest_celery_py37 import MemcachedTestBackend
 
 memcached_image = fetch(repository=MEMCACHED_IMAGE)
 memcached_test_container = container(

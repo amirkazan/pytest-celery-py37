@@ -1,4 +1,4 @@
-from pytest_celery import CeleryTestSetup
+from pytest_celery_py37 import CeleryTestSetup
 from tests.conftest import MyWorker
 from tests.myutils import myfunc
 

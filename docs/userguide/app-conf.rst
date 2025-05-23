@@ -35,7 +35,7 @@ Worker App Configuration
 
 .. versionadded:: 1.0.0
 
-To configure the worker app, use the :func:`default_worker_app <pytest_celery.vendors.worker.fixtures.default_worker_app>` fixture.
+To configure the worker app, use the :func:`default_worker_app <pytest_celery_py37.vendors.worker.fixtures.default_worker_app>` fixture.
 
 .. code-block:: python
 

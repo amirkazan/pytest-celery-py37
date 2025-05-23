@@ -4,9 +4,9 @@ from pytest_docker_tools import build
 from pytest_docker_tools import container
 from pytest_docker_tools import fxtr
 
-from pytest_celery import CeleryTestWorker
-from pytest_celery import CeleryWorkerContainer
-from pytest_celery import defaults
+from pytest_celery_py37 import CeleryTestWorker
+from pytest_celery_py37 import CeleryWorkerContainer
+from pytest_celery_py37 import defaults
 
 
 class GeventWorkerContainer(CeleryWorkerContainer):

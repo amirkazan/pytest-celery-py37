@@ -3,10 +3,10 @@ from __future__ import annotations
 import pytest
 from celery import Celery
 
-from pytest_celery import RESULT_TIMEOUT
-from pytest_celery import CeleryTestSetup
-from pytest_celery import CeleryTestWorker
-from pytest_celery import LocalstackTestBroker
+from pytest_celery_py37 import RESULT_TIMEOUT
+from pytest_celery_py37 import CeleryTestSetup
+from pytest_celery_py37 import CeleryTestWorker
+from pytest_celery_py37 import LocalstackTestBroker
 from tests.integration.api.custom_setup.conftest import Celery4WorkerContainer
 from tests.integration.api.custom_setup.conftest import Celery5WorkerContainer
 from tests.tasks import identity

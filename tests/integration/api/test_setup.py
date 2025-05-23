@@ -3,12 +3,12 @@ from __future__ import annotations
 import pytest
 from celery import Celery
 
-from pytest_celery import RESULT_TIMEOUT
-from pytest_celery import CeleryBackendCluster
-from pytest_celery import CeleryBrokerCluster
-from pytest_celery import CeleryTestSetup
-from pytest_celery import CeleryTestWorker
-from pytest_celery import CeleryWorkerCluster
+from pytest_celery_py37 import RESULT_TIMEOUT
+from pytest_celery_py37 import CeleryBackendCluster
+from pytest_celery_py37 import CeleryBrokerCluster
+from pytest_celery_py37 import CeleryTestSetup
+from pytest_celery_py37 import CeleryTestWorker
+from pytest_celery_py37 import CeleryWorkerCluster
 from tests.tasks import identity
 
 

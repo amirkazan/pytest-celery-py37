@@ -3,8 +3,8 @@ from __future__ import annotations
 import pytest
 from kombu import Connection
 
-from pytest_celery import LocalstackContainer
-from pytest_celery import LocalstackTestBroker
+from pytest_celery_py37 import LocalstackContainer
+from pytest_celery_py37 import LocalstackTestBroker
 from tests.defaults import ALL_LOCALSTACK_FIXTURES
 
 

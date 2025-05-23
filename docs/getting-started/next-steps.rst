@@ -33,9 +33,9 @@ strightforward regeneration of the code, to inject testing infrastructure into t
 Initial Content
 ~~~~~~~~~~~~~~~
 
-The :class:`WorkerInitialContent <pytest_celery.vendors.worker.volume.WorkerInitialContent>` class is responsible for generating
+The :class:`WorkerInitialContent <pytest_celery_py37.vendors.worker.volume.WorkerInitialContent>` class is responsible for generating
 the initial content of the worker volume. It is used to parse the injected infrastructure and generate a dictionary of files for the
-initial content of the worker container volume using :func:`WorkerInitialContent.generate() <pytest_celery.vendors.worker.volume.WorkerInitialContent.generate>`.
+initial content of the worker container volume using :func:`WorkerInitialContent.generate() <pytest_celery_py37.vendors.worker.volume.WorkerInitialContent.generate>`.
 
 The code generation mechanism is responsible for injecting the following modules into the worker container.
 
@@ -47,9 +47,9 @@ the ``/app`` directory to store the generated code.
 
 .. _content-app:
 
-.. literalinclude:: ../../src/pytest_celery/vendors/worker/content/app.py
+.. literalinclude:: ../../src/pytest_celery_py37/vendors/worker/content/app.py
    :language: python
-   :caption: pytest_celery.vendors.worker.content.app
+   :caption: pytest_celery_py37.vendors.worker.content.app
 
 .. note::
 
@@ -60,11 +60,11 @@ utils.py
 
 The plugin injects a helper ``utils.py`` module to allow running testing infrastructure code within the worker container context.
 
-.. literalinclude:: ../../src/pytest_celery/vendors/worker/content/utils.py
+.. literalinclude:: ../../src/pytest_celery_py37/vendors/worker/content/utils.py
    :language: python
-   :caption: pytest_celery.vendors.worker.content.utils
+   :caption: pytest_celery_py37.vendors.worker.content.utils
 
-See :func:`CeleryTestWorker.get_running_processes_info() <pytest_celery.api.worker.CeleryTestWorker.get_running_processes_info>`
+See :func:`CeleryTestWorker.get_running_processes_info() <pytest_celery_py37.api.worker.CeleryTestWorker.get_running_processes_info>`
 for an example of how the ``utils.py`` module is used.
 
 .. note::
@@ -74,7 +74,7 @@ for an example of how the ``utils.py`` module is used.
 Tasks modules
 ~~~~~~~~~~~~~
 
-Tasks modules are being defined using the :func:`default_worker_tasks <pytest_celery.vendors.worker.fixtures.default_worker_tasks>` fixture.
+Tasks modules are being defined using the :func:`default_worker_tasks <pytest_celery_py37.vendors.worker.fixtures.default_worker_tasks>` fixture.
 The tasks modules will be reconstructed inside the volume with the same structure as the test environment to avoid python import errors.
 
 Use the following snippet to add tasks modules to the worker container:
@@ -128,7 +128,7 @@ Injected signal handlers
 ------------------------
 
 Signal handlers that are being registered on the Celery consumer side, are being injected into the worker container
-using the :func:`default_worker_signals <pytest_celery.vendors.worker.fixtures.default_worker_signals>` fixture,
+using the :func:`default_worker_signals <pytest_celery_py37.vendors.worker.fixtures.default_worker_signals>` fixture,
 similar to the tasks modules.
 
 .. code-block:: python
@@ -219,7 +219,7 @@ We'll use the following Dockerfile to create a custom worker container to replac
    :language: docker
    :caption: examples.myworker.tests.myworker.Dockerfile
 
-Then, we'll create our own :class:`CeleryWorkerContainer <pytest_celery.vendors.worker.container.CeleryWorkerContainer>` class.
+Then, we'll create our own :class:`CeleryWorkerContainer <pytest_celery_py37.vendors.worker.container.CeleryWorkerContainer>` class.
 
 .. code-block:: python
 
@@ -303,7 +303,7 @@ Setup Integration
 Lastly, you need to integrate the new component into the setup pipeline according to its role in the architecture. As
 :ref:`discussed before <test-clusters>`, components are loaded using the appropriate cluster fixture.
 
-As we're replacing the worker component, we use the :func:`celery_worker_cluster <pytest_celery.fixtures.worker.celery_worker_cluster>` to
+As we're replacing the worker component, we use the :func:`celery_worker_cluster <pytest_celery_py37.fixtures.worker.celery_worker_cluster>` to
 add it to the setup.
 
 .. code-block:: python
@@ -317,7 +317,7 @@ add it to the setup.
 This code will add a new worker to the default worker cluster. The workers will be aware of each other and will share
 the same docker network and Celery app instance.
 
-To access the new worker, you can use the :func:`celery_setup <pytest_celery.fixtures.setup.celery_setup>` fixture.
+To access the new worker, you can use the :func:`celery_setup <pytest_celery_py37.fixtures.setup.celery_setup>` fixture.
 
 .. code-block:: python
 

@@ -8,12 +8,12 @@ from pytest_docker_tools import build
 from pytest_docker_tools import container
 from pytest_docker_tools import fxtr
 
-from pytest_celery import DEFAULT_WORKER_CONTAINER_TIMEOUT
-from pytest_celery import DEFAULT_WORKER_VOLUME
-from pytest_celery import WORKER_DOCKERFILE_ROOTDIR
-from pytest_celery import CeleryTestWorker
-from pytest_celery import CeleryWorkerCluster
-from pytest_celery import CeleryWorkerContainer
+from pytest_celery_py37 import DEFAULT_WORKER_CONTAINER_TIMEOUT
+from pytest_celery_py37 import DEFAULT_WORKER_VOLUME
+from pytest_celery_py37 import WORKER_DOCKERFILE_ROOTDIR
+from pytest_celery_py37 import CeleryTestWorker
+from pytest_celery_py37 import CeleryWorkerCluster
+from pytest_celery_py37 import CeleryWorkerContainer
 
 
 class Celery4WorkerContainer(CeleryWorkerContainer):

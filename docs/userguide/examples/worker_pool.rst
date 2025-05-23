@@ -70,7 +70,7 @@ Our tasks module is using the example task from the `Celery gevent example <http
 test_gevent_pool.py
 ~~~~~~~~~~~~~~~~~~~
 
-To add a new gevent worker, we create a new :class:`CeleryWorkerContainer <pytest_celery.vendors.worker.container.CeleryWorkerContainer>` to
+To add a new gevent worker, we create a new :class:`CeleryWorkerContainer <pytest_celery_py37.vendors.worker.container.CeleryWorkerContainer>` to
 configure the worker with the gevent pool.
 
 .. literalinclude:: ../../../examples/worker_pool/tests/test_gevent_pool.py

@@ -28,7 +28,7 @@ The component's node creation fixture receives the worker container during its i
 Container
 ---------
 
-The default worker container receives its configuration from the :mod:`default worker fixtures <pytest_celery.vendors.worker.fixtures>`.
+The default worker container receives its configuration from the :mod:`default worker fixtures <pytest_celery_py37.vendors.worker.fixtures>`.
 Each fixture is responsible for a different layer of the initialization procedure.
 
 .. code-block:: python
@@ -70,9 +70,9 @@ Environment variables are provided to the worker container during initialization
 using the :ref:`vendor-class`.
 
 The worker receives the broker and result backend configurations from the environment variables
-by default using the :func:`celery_worker_cluster_config <pytest_celery.fixtures.worker.celery_worker_cluster_config>` fixture,
-which is initialized using :func:`celery_broker_cluster_config <pytest_celery.fixtures.broker.celery_broker_cluster_config>` and
-:func:`celery_backend_cluster_config <pytest_celery.fixtures.backend.celery_backend_cluster_config>` fixtures,
+by default using the :func:`celery_worker_cluster_config <pytest_celery_py37.fixtures.worker.celery_worker_cluster_config>` fixture,
+which is initialized using :func:`celery_broker_cluster_config <pytest_celery_py37.fixtures.broker.celery_broker_cluster_config>` and
+:func:`celery_backend_cluster_config <pytest_celery_py37.fixtures.backend.celery_backend_cluster_config>` fixtures,
 to provide the worker with the broker and result backend configurations according to the configured broker and backend clusters.
 
 Network
@@ -139,7 +139,7 @@ Wrapper Class
 The ``wrapper_class`` is responsible for providing the configuration class that will be used to
 initialize the worker container instance.
 
-The ``wrapper_class`` must be a subclass of :class:`CeleryWorkerContainer <pytest_celery.vendors.worker.container.CeleryWorkerContainer>`.
+The ``wrapper_class`` must be a subclass of :class:`CeleryWorkerContainer <pytest_celery_py37.vendors.worker.container.CeleryWorkerContainer>`.
 
 See more: `Fixture wrappers <https://github.com/Jc2k/pytest-docker-tools?tab=readme-ov-file#fixture-wrappers>`_.
 
@@ -157,7 +157,7 @@ Command
 #######
 
 The command field allows to override the worker container ``CMD`` instruction instead of
-the ``CMD`` defined in the Dockerfile using the :func:`default_worker_command <pytest_celery.vendors.worker.fixtures.default_worker_command>` fixture.
+the ``CMD`` defined in the Dockerfile using the :func:`default_worker_command <pytest_celery_py37.vendors.worker.fixtures.default_worker_command>` fixture.
 
 If the ``CMD`` instruction is provided in the Dockerfile, the command field can be omitted.
 
@@ -200,7 +200,7 @@ The following diagram describes the worker component initialization pipeline des
 Configuration Pipeline
 ~~~~~~~~~~~~~~~~~~~~~~
 
-The worker uses the :func:`default_worker_initial_content <pytest_celery.vendors.worker.fixtures.default_worker_initial_content>` fixture
+The worker uses the :func:`default_worker_initial_content <pytest_celery_py37.vendors.worker.fixtures.default_worker_initial_content>` fixture
 to provide the worker with the initial content that will be used to configure the worker component's container volume.
 
 .. code-block:: python
@@ -216,9 +216,9 @@ to provide the worker with the initial content that will be used to configure th
         ...
     ) -> dict:
 
-It uses the :mod:`default worker fixtures <pytest_celery.vendors.worker.fixtures>` to allow configuring every part of the volume
+It uses the :mod:`default worker fixtures <pytest_celery_py37.vendors.worker.fixtures>` to allow configuring every part of the volume
 using the standard `pytest fixtures mechanism <https://docs.pytest.org/en/latest/reference/fixtures.html#fixtures>`_ by itself
-without hooking into the :func:`default_worker_initial_content <pytest_celery.vendors.worker.fixtures.default_worker_initial_content>`
+without hooking into the :func:`default_worker_initial_content <pytest_celery_py37.vendors.worker.fixtures.default_worker_initial_content>`
 fixture directly.
 
 The volume initialization integrates into the initialization pipeline by injecting worker configurations and files

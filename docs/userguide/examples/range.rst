@@ -75,7 +75,7 @@ It uses the `pypi.org <https://pypi.org/>`_ API to get the list of versions and 
 test_range.py
 ~~~~~~~~~~~~~
 
-In this scenario, we reconfigure the :func:`default worker <pytest_celery.vendors.worker.fixtures.celery_setup_worker>`
+In this scenario, we reconfigure the :func:`default worker <pytest_celery_py37.vendors.worker.fixtures.celery_setup_worker>`
 to run against each Celery version in the list. This will add additional `parametization <https://docs.pytest.org/en/latest/how-to/parametrize.html>`_
 to the worker fixture, and will generate a different worker for each Celery version.
 
@@ -112,7 +112,7 @@ test_range_cluster.py
 ~~~~~~~~~~~~~~~~~~~~~
 
 In this scenario, we generate a list of workers per version, and then configure the
-:func:`celery_worker_cluster <pytest_celery.fixtures.worker.celery_worker_cluster>` to include all of them.
+:func:`celery_worker_cluster <pytest_celery_py37.fixtures.worker.celery_worker_cluster>` to include all of them.
 
 Once using a range of Celery versions, and once using a fixed list.
 
@@ -154,7 +154,7 @@ Our focus should be on the ``worker_containers`` list, which will contain the na
             worker_containers.append(cnt)
         return worker_containers
 
-Next, we configure the :func:`celery_worker_cluster <pytest_celery.fixtures.worker.celery_worker_cluster>`
+Next, we configure the :func:`celery_worker_cluster <pytest_celery_py37.fixtures.worker.celery_worker_cluster>`
 to include all the workers, and then run a simple test case to verify the cluster is configured as expected.
 
 .. code-block:: python

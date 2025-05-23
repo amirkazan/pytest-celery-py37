@@ -4,13 +4,13 @@ from pytest_docker_tools import container
 from pytest_docker_tools import fxtr
 from pytest_subtests import SubTests
 
-from pytest_celery import DEFAULT_WORKER_CONTAINER_TIMEOUT
-from pytest_celery import DEFAULT_WORKER_VOLUME
-from pytest_celery import WORKER_DOCKERFILE_ROOTDIR
-from pytest_celery import CeleryTestSetup
-from pytest_celery import CeleryTestWorker
-from pytest_celery import CeleryWorkerCluster
-from pytest_celery import CeleryWorkerContainer
+from pytest_celery_py37 import DEFAULT_WORKER_CONTAINER_TIMEOUT
+from pytest_celery_py37 import DEFAULT_WORKER_VOLUME
+from pytest_celery_py37 import WORKER_DOCKERFILE_ROOTDIR
+from pytest_celery_py37 import CeleryTestSetup
+from pytest_celery_py37 import CeleryTestWorker
+from pytest_celery_py37 import CeleryWorkerCluster
+from pytest_celery_py37 import CeleryWorkerContainer
 from tests.conftest import get_celery_versions
 
 versions_range = get_celery_versions("v5.0.0", "v5.0.5")

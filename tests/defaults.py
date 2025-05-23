@@ -1,15 +1,15 @@
-from pytest_celery import CELERY_BACKEND
-from pytest_celery import CELERY_BACKEND_CLUSTER
-from pytest_celery import CELERY_BROKER
-from pytest_celery import CELERY_BROKER_CLUSTER
-from pytest_celery import CELERY_WORKER
-from pytest_celery import CELERY_WORKER_CLUSTER
-from pytest_celery import DEFAULT_LOCALSTACK_BROKER
-from pytest_celery import DEFAULT_MEMCACHED_BACKEND
-from pytest_celery import DEFAULT_RABBITMQ_BROKER
-from pytest_celery import DEFAULT_REDIS_BACKEND
-from pytest_celery import DEFAULT_REDIS_BROKER
-from pytest_celery import DEFAULT_WORKER
+from pytest_celery_py37 import CELERY_BACKEND
+from pytest_celery_py37 import CELERY_BACKEND_CLUSTER
+from pytest_celery_py37 import CELERY_BROKER
+from pytest_celery_py37 import CELERY_BROKER_CLUSTER
+from pytest_celery_py37 import CELERY_WORKER
+from pytest_celery_py37 import CELERY_WORKER_CLUSTER
+from pytest_celery_py37 import DEFAULT_LOCALSTACK_BROKER
+from pytest_celery_py37 import DEFAULT_MEMCACHED_BACKEND
+from pytest_celery_py37 import DEFAULT_RABBITMQ_BROKER
+from pytest_celery_py37 import DEFAULT_REDIS_BACKEND
+from pytest_celery_py37 import DEFAULT_REDIS_BROKER
+from pytest_celery_py37 import DEFAULT_WORKER
 
 DEFAULT_WORKERS = (DEFAULT_WORKER,)
 DEFAULT_BACKENDS = (

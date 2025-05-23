@@ -172,7 +172,7 @@ test_tasks.py
 ~~~~~~~~~~~~~
 
 The ``test_tasks.py`` file contains the tests for the ``demoapp`` tasks.
-It can directly import the tasks and the :func:`celery_setup <pytest_celery.fixtures.setup.celery_setup>` will
+It can directly import the tasks and the :func:`celery_setup <pytest_celery_py37.fixtures.setup.celery_setup>` will
 run the django app worker so the tasks can be tested.
 
 .. code-block:: python

@@ -2,13 +2,13 @@ from __future__ import annotations
 
 import pytest
 
-from pytest_celery import REDIS_ENV
-from pytest_celery import REDIS_IMAGE
-from pytest_celery import REDIS_PORTS
-from pytest_celery import REDIS_PREFIX
-from pytest_celery import RedisContainer
-from pytest_celery import RedisTestBackend
-from pytest_celery import RedisTestBroker
+from pytest_celery_py37 import REDIS_ENV
+from pytest_celery_py37 import REDIS_IMAGE
+from pytest_celery_py37 import REDIS_PORTS
+from pytest_celery_py37 import REDIS_PREFIX
+from pytest_celery_py37 import RedisContainer
+from pytest_celery_py37 import RedisTestBackend
+from pytest_celery_py37 import RedisTestBroker
 
 
 class test_redis_container:

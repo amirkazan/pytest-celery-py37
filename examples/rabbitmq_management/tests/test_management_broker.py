@@ -1,7 +1,7 @@
 import requests
 from requests.auth import HTTPBasicAuth
 
-from pytest_celery import CeleryTestSetup
+from pytest_celery_py37 import CeleryTestSetup
 from tests.conftest import RabbitMQManagementTestBroker
 
 

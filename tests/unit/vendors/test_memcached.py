@@ -2,12 +2,12 @@ from __future__ import annotations
 
 import pytest
 
-from pytest_celery import MEMCACHED_ENV
-from pytest_celery import MEMCACHED_IMAGE
-from pytest_celery import MEMCACHED_PORTS
-from pytest_celery import MEMCACHED_PREFIX
-from pytest_celery import MemcachedContainer
-from pytest_celery import MemcachedTestBackend
+from pytest_celery_py37 import MEMCACHED_ENV
+from pytest_celery_py37 import MEMCACHED_IMAGE
+from pytest_celery_py37 import MEMCACHED_PORTS
+from pytest_celery_py37 import MEMCACHED_PREFIX
+from pytest_celery_py37 import MemcachedContainer
+from pytest_celery_py37 import MemcachedTestBackend
 
 
 class test_memcached_container:

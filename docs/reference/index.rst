@@ -6,4 +6,4 @@ API Documentation
 .. toctree::
    :maxdepth: 4
 
-   pytest_celery
+   pytest_celery_py37

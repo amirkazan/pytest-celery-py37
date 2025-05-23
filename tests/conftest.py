@@ -3,7 +3,7 @@ import os
 import pytest
 from celery import Celery
 
-from pytest_celery import LOCALSTACK_CREDS
+from pytest_celery_py37 import LOCALSTACK_CREDS
 
 
 @pytest.fixture

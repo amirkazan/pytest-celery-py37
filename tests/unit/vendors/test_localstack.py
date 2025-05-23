@@ -2,12 +2,12 @@ from __future__ import annotations
 
 import pytest
 
-from pytest_celery import LOCALSTACK_ENV
-from pytest_celery import LOCALSTACK_IMAGE
-from pytest_celery import LOCALSTACK_PORTS
-from pytest_celery import LOCALSTACK_PREFIX
-from pytest_celery import LocalstackContainer
-from pytest_celery import LocalstackTestBroker
+from pytest_celery_py37 import LOCALSTACK_ENV
+from pytest_celery_py37 import LOCALSTACK_IMAGE
+from pytest_celery_py37 import LOCALSTACK_PORTS
+from pytest_celery_py37 import LOCALSTACK_PREFIX
+from pytest_celery_py37 import LocalstackContainer
+from pytest_celery_py37 import LocalstackTestBroker
 
 
 class test_localstack_container:

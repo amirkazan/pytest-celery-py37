@@ -31,7 +31,7 @@ Tasks modules injection
 
 .. versionadded:: 1.0.0
 
-To add you own tasks, use the :func:`default_worker_tasks <pytest_celery.vendors.worker.fixtures.default_worker_tasks>` fixture.
+To add you own tasks, use the :func:`default_worker_tasks <pytest_celery_py37.vendors.worker.fixtures.default_worker_tasks>` fixture.
 
 .. code-block:: python
 

@@ -1,6 +1,6 @@
-from pytest_celery import RESULT_TIMEOUT
-from pytest_celery import CeleryTestSetup
-from pytest_celery import ping
+from pytest_celery_py37 import RESULT_TIMEOUT
+from pytest_celery_py37 import CeleryTestSetup
+from pytest_celery_py37 import ping
 
 
 class TestVhost:

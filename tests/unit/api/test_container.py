@@ -4,7 +4,7 @@ from unittest.mock import Mock
 
 import pytest
 
-from pytest_celery import CeleryTestContainer
+from pytest_celery_py37 import CeleryTestContainer
 
 
 @pytest.fixture

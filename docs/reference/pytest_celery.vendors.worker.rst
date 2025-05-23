@@ -7,7 +7,7 @@ Subpackages
 .. toctree::
    :maxdepth: 4
 
-   pytest_celery.vendors.worker.content
+   pytest_celery_py37.vendors.worker.content
 
 Submodules
 ----------
@@ -15,7 +15,7 @@ Submodules
 pytest\_celery.vendors.worker.container module
 ----------------------------------------------
 
-.. automodule:: pytest_celery.vendors.worker.container
+.. automodule:: pytest_celery_py37.vendors.worker.container
    :members:
    :undoc-members:
    :show-inheritance:
@@ -23,7 +23,7 @@ pytest\_celery.vendors.worker.container module
 pytest\_celery.vendors.worker.defaults module
 ---------------------------------------------
 
-.. automodule:: pytest_celery.vendors.worker.defaults
+.. automodule:: pytest_celery_py37.vendors.worker.defaults
    :members:
    :undoc-members:
    :show-inheritance:
@@ -31,7 +31,7 @@ pytest\_celery.vendors.worker.defaults module
 pytest\_celery.vendors.worker.fixtures module
 ---------------------------------------------
 
-.. automodule:: pytest_celery.vendors.worker.fixtures
+.. automodule:: pytest_celery_py37.vendors.worker.fixtures
    :members:
    :undoc-members:
    :show-inheritance:
@@ -39,7 +39,7 @@ pytest\_celery.vendors.worker.fixtures module
 pytest\_celery.vendors.worker.tasks module
 ------------------------------------------
 
-.. automodule:: pytest_celery.vendors.worker.tasks
+.. automodule:: pytest_celery_py37.vendors.worker.tasks
    :members:
    :undoc-members:
    :show-inheritance:
@@ -47,7 +47,7 @@ pytest\_celery.vendors.worker.tasks module
 pytest\_celery.vendors.worker.volume module
 -------------------------------------------
 
-.. automodule:: pytest_celery.vendors.worker.volume
+.. automodule:: pytest_celery_py37.vendors.worker.volume
    :members:
    :undoc-members:
    :show-inheritance:
@@ -55,7 +55,7 @@ pytest\_celery.vendors.worker.volume module
 Module contents
 ---------------
 
-.. automodule:: pytest_celery.vendors.worker
+.. automodule:: pytest_celery_py37.vendors.worker
    :members:
    :undoc-members:
    :show-inheritance:

@@ -4,14 +4,14 @@ import inspect
 
 import pytest
 
-from pytest_celery import DEFAULT_WORKER_ENV
-from pytest_celery import DEFAULT_WORKER_LOG_LEVEL
-from pytest_celery import DEFAULT_WORKER_NAME
-from pytest_celery import DEFAULT_WORKER_QUEUE
-from pytest_celery import DEFAULT_WORKER_VERSION
-from pytest_celery import CeleryBackendCluster
-from pytest_celery import CeleryBrokerCluster
-from pytest_celery import CeleryWorkerContainer
+from pytest_celery_py37 import DEFAULT_WORKER_ENV
+from pytest_celery_py37 import DEFAULT_WORKER_LOG_LEVEL
+from pytest_celery_py37 import DEFAULT_WORKER_NAME
+from pytest_celery_py37 import DEFAULT_WORKER_QUEUE
+from pytest_celery_py37 import DEFAULT_WORKER_VERSION
+from pytest_celery_py37 import CeleryBackendCluster
+from pytest_celery_py37 import CeleryBrokerCluster
+from pytest_celery_py37 import CeleryWorkerContainer
 
 
 class test_celery_worker_container:
@@ -28,12 +28,12 @@ class test_celery_worker_container:
         assert CeleryWorkerContainer.worker_queue() == DEFAULT_WORKER_QUEUE
 
     def test_app_module(self):
-        from pytest_celery.vendors.worker.content import app
+        from pytest_celery_py37.vendors.worker.content import app
 
         assert CeleryWorkerContainer.app_module() == app
 
     def test_tasks_modules(self):
-        from pytest_celery.vendors.worker import tasks
+        from pytest_celery_py37.vendors.worker import tasks
 
         assert CeleryWorkerContainer.tasks_modules() == {tasks}
 

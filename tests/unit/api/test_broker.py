@@ -3,9 +3,9 @@ from __future__ import annotations
 import pytest
 from celery import Celery
 
-from pytest_celery import DEFAULT_WORKER_ENV
-from pytest_celery import CeleryBrokerCluster
-from pytest_celery import CeleryTestBroker
+from pytest_celery_py37 import DEFAULT_WORKER_ENV
+from pytest_celery_py37 import CeleryBrokerCluster
+from pytest_celery_py37 import CeleryTestBroker
 
 
 class test_celey_test_broker:

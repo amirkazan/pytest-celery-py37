@@ -7,16 +7,16 @@ Subpackages
 .. toctree::
    :maxdepth: 4
 
-   pytest_celery.vendors.localstack
-   pytest_celery.vendors.memcached
-   pytest_celery.vendors.rabbitmq
-   pytest_celery.vendors.redis
-   pytest_celery.vendors.worker
+   pytest_celery_py37.vendors.localstack
+   pytest_celery_py37.vendors.memcached
+   pytest_celery_py37.vendors.rabbitmq
+   pytest_celery_py37.vendors.redis
+   pytest_celery_py37.vendors.worker
 
 Module contents
 ---------------
 
-.. automodule:: pytest_celery.vendors
+.. automodule:: pytest_celery_py37.vendors
    :members:
    :undoc-members:
    :show-inheritance:

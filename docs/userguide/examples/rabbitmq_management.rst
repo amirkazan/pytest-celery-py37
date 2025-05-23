@@ -61,7 +61,7 @@ Then, we need to expose the management UI port.
         ports.update({"15672/tcp": None})
         return ports
 
-The :class:`RabbitMQTestBroker <pytest_celery.vendors.rabbitmq.api.RabbitMQTestBroker>` class is used to represent a logical broker in the
+The :class:`RabbitMQTestBroker <pytest_celery_py37.vendors.rabbitmq.api.RabbitMQTestBroker>` class is used to represent a logical broker in the
 testing environment, so we create our own subclass to represent the management
 broker. We add our custom logic to get the REST API URL, which we can later on
 access from our tests automatically.
@@ -85,8 +85,8 @@ This allows us to extend the broker API with our own implementation.
         yield broker
         broker.teardown()
 
-The :func:`celery_broker <pytest_celery.fixtures.broker.celery_broker>` fixture is a special parameterized fixture that
-provides all of the available broker fixtures. By default :func:`celery_broker_cluster <pytest_celery.fixtures.broker.celery_broker_cluster>`
+The :func:`celery_broker <pytest_celery_py37.fixtures.broker.celery_broker>` fixture is a special parameterized fixture that
+provides all of the available broker fixtures. By default :func:`celery_broker_cluster <pytest_celery_py37.fixtures.broker.celery_broker_cluster>`
 uses ``celery_broker``. For the sake of the example, we've overridden it to use only one broker, our own custom rabbitmq management broker.
 
 .. code-block:: python

@@ -3,11 +3,11 @@ from __future__ import annotations
 import pytest
 from celery import Celery
 
-from pytest_celery import CeleryTestCluster
-from pytest_celery import CeleryTestNode
-from pytest_celery import CeleryTestWorker
-from pytest_celery import CeleryWorkerCluster
-from pytest_celery import CeleryWorkerContainer
+from pytest_celery_py37 import CeleryTestCluster
+from pytest_celery_py37 import CeleryTestNode
+from pytest_celery_py37 import CeleryTestWorker
+from pytest_celery_py37 import CeleryWorkerCluster
+from pytest_celery_py37 import CeleryWorkerContainer
 from tests.integration.api.test_base import BaseCluster
 from tests.integration.api.test_base import BaseNodes
 

@@ -7,7 +7,7 @@ Submodules
 pytest\_celery.fixtures.backend module
 --------------------------------------
 
-.. automodule:: pytest_celery.fixtures.backend
+.. automodule:: pytest_celery_py37.fixtures.backend
    :members:
    :undoc-members:
    :show-inheritance:
@@ -15,7 +15,7 @@ pytest\_celery.fixtures.backend module
 pytest\_celery.fixtures.broker module
 -------------------------------------
 
-.. automodule:: pytest_celery.fixtures.broker
+.. automodule:: pytest_celery_py37.fixtures.broker
    :members:
    :undoc-members:
    :show-inheritance:
@@ -23,7 +23,7 @@ pytest\_celery.fixtures.broker module
 pytest\_celery.fixtures.setup module
 ------------------------------------
 
-.. automodule:: pytest_celery.fixtures.setup
+.. automodule:: pytest_celery_py37.fixtures.setup
    :members:
    :undoc-members:
    :show-inheritance:
@@ -31,7 +31,7 @@ pytest\_celery.fixtures.setup module
 pytest\_celery.fixtures.worker module
 -------------------------------------
 
-.. automodule:: pytest_celery.fixtures.worker
+.. automodule:: pytest_celery_py37.fixtures.worker
    :members:
    :undoc-members:
    :show-inheritance:
@@ -39,7 +39,7 @@ pytest\_celery.fixtures.worker module
 Module contents
 ---------------
 
-.. automodule:: pytest_celery.fixtures
+.. automodule:: pytest_celery_py37.fixtures
    :members:
    :undoc-members:
    :show-inheritance:
